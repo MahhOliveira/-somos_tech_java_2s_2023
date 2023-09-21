@@ -1,0 +1,14 @@
+public class ConversorTemperatura {
+
+    public static void main(String[] args) {
+      
+        // Declarando a variável para a temperatura em graus Celsius
+        double celsius = 25.0;
+        
+        // Convertendo Celsius para Fahrenheit usando a fórmula
+        double fahrenheit = (celsius * 9/5) + 32;
+        
+        // Exibindo o resultado
+        System.out.println(celsius + " graus Celsius é igual a " + fahrenheit + " graus Fahrenheit.");
+    }
+}
