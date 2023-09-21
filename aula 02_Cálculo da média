@@ -1,0 +1,18 @@
+public class CalculoMedia {
+
+    public static void main(String[] args) {
+        // Declaração das notas em três provas
+        double nota1 = 7.5;
+        double nota2 = 8.0;
+        double nota3 = 6.5;
+
+        // Cálculo da média das notas
+        double media = (nota1 + nota2 + nota3) / 3.0;
+
+        // Exibição da média das notas
+        System.out.println("Nota da prova 1: " + nota1);
+        System.out.println("Nota da prova 2: " + nota2);
+        System.out.println("Nota da prova 3: " + nota3);
+        System.out.println("Média das notas: " + media);
+    }
+}
