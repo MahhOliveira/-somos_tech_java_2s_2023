@@ -1,0 +1,14 @@
+public class NomeCompleto {
+
+    public static void main(String[] args) {
+        // Declare as variáveis para o primeiro nome e sobrenome
+        String primeiroNome = "João";
+        String sobrenome = "Silva";
+
+        // Concatene as strings para formar o nome completo
+        String nomeCompleto = primeiroNome + " " + sobrenome;
+
+        // Exiba o nome completo na tela
+        System.out.println("Nome completo: " + nomeCompleto);
+    }
+}
