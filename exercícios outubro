@@ -1,0 +1,136 @@
+exercício 1 
+class Pessoa {
+    String nome;
+    int idade;
+
+    public Pessoa(String nome, int idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
+}
+
+public class Main {
+    public static void imprimePessoa(Pessoa pessoa) {
+        System.out.println("Nome: " + pessoa.nome);
+        System.out.println("Idade: " + pessoa.idade);
+    }
+
+    public static void main(String[] args) {
+        Pessoa pessoa1 = new Pessoa("Alice", 25);
+        Pessoa pessoa2 = new Pessoa("Bob", 30);
+
+        imprimePessoa(pessoa1);
+        imprimePessoa(pessoa2);
+    }
+}
+
+exercício 2 
+
+class Calculadora {
+    public static int soma(int a, int b) {
+        return a + b;
+    }
+
+    public static int subtracao(int a, int b) {
+        return a - b;
+    }
+
+    public static int multiplicacao(int a, int b) {
+        return a * b;
+    }
+
+    public static double divisao(int a, int b) {
+        if (b == 0) {
+            System.out.println("Divisão por zero não é permitida.");
+            return 0;
+        }
+        return (double) a / b;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        int num1 = 10;
+        int num2 = 5;
+
+        System.out.println("Soma: " + Calculadora.soma(num1, num2));
+        System.out.println("Subtração: " + Calculadora.subtracao(num1, num2));
+        System.out.println("Multiplicação: " + Calculadora.multiplicacao(num1, num2));
+        System.out.println("Divisão: " + Calculadora.divisao(num1, num2));
+    }
+}
+
+exercício 3 
+class Livro {
+    String titulo;
+    String autor;
+
+    public Livro(String titulo, String autor) {
+        this.titulo = titulo;
+        this.autor = autor;
+    }
+}
+
+class Biblioteca {
+    Livro[] livros;
+    int contador;
+
+    public Biblioteca() {
+        livros = new Livro[10];
+        contador = 0;
+    }
+
+    public void adicionarLivro(Livro livro) {
+        if (contador < 10) {
+            livros[contador] = livro;
+            contador++;
+        } else {
+            System.out.println("A biblioteca está cheia. Não é possível adicionar mais livros.");
+        }
+    }
+
+    public void listarLivros() {
+        System.out.println("Lista de Livros na Biblioteca:");
+        for (int i = 0; i < contador; i++) {
+            System.out.println("Título: " + livros[i].titulo);
+            System.out.println("Autor: " + livros[i].autor);
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Biblioteca biblioteca = new Biblioteca();
+
+        Livro livro1 = new Livro("O Senhor dos Anéis", "J.R.R. Tolkien");
+        Livro livro2 = new Livro("Harry Potter e a Pedra Filosofal", "J.K. Rowling");
+
+        biblioteca.adicionarLivro(livro1);
+        biblioteca.adicionarLivro(livro2);
+
+        biblioteca.listarLivros();
+    }
+}
+ exercício 4
+ import java.util.Random;
+
+class Matematica {
+    public static int gerarNumeroAleatorio() {
+        Random rand = new Random();
+        return rand.nextInt(100) + 1;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        int numero1 = Matematica.gerarNumeroAleatorio();
+        int numero2 = Matematica.gerarNumeroAleatorio();
+        int numero3 = Matematica.gerarNumeroAleatorio();
+
+        System.out.println("Número aleatório 1: " + numero1);
+        System.out.println("Número aleatório 2: " + numero2);
+        System.out.println("Número aleatório 3: " + numero3);
+    }
+}
+
+
